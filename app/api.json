@@ -1,0 +1,194 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "v1",
+		"title": "FoodTrucks",
+    "description": "An TryApp sample API App where you can find Food trucks."
+	},
+	"host": "microsoft-apiapp1fe6951749ff4b76b8cc9194bc29ba61.azurewebsites.net:443",
+	"schemes": ["http", "https"],
+  "basePath": "/api/data",
+	"paths": {
+		"/foodtrucks": {
+			"get": {
+				"tags": ["FoodTrucks"],
+				"operationId": "getFoodTrucks",
+				"consumes": [],
+				"produces": ["application/json",
+				"text/json",
+				"application/xml",
+				"text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/FoodTrucks"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/foodtrucks/{id}": {
+			"get": {
+				"tags": ["FoodTrucks"],
+				"operationId": "getFoodTruckDetails",
+				"consumes": [],
+				"produces": ["application/json",
+				"text/json",
+				"application/xml",
+				"text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/FoodTrucks"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		}
+	},
+	"definitions": {
+		"FoodTrucks": {
+			"type": "object",
+			"properties": {
+				"Restaurant": {
+					"$ref": "Restaurant"
+				},
+				"Truck": {
+					"$ref": "Truck"
+				},
+				"Trucklocation": {
+					"$ref": "Trucklocation"
+				},
+				"Tweet": {
+					"$ref": "Tweet"
+				}
+			}
+		},
+		"Restaurant": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"slug": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"image_main": {
+					"type": "string"
+				},
+				"like_count": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"savory": {
+					"type": "boolean"
+				},
+				"sweet": {
+					"type": "boolean"
+				},
+				"vegetarian": {
+					"type": "boolean"
+				},
+				"bookable": {
+					"type": "boolean"
+				}
+			}
+		},
+		"Truck": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				}
+			}
+		},
+		"Trucklocation": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"$ref": "Object"
+				},
+				"method": {
+					"type": "string"
+				},
+				"location": {
+					"type": "string"
+				},
+				"format_location": {
+					"type": "string"
+				},
+				"id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"lat": {
+					"type": "string"
+				},
+				"lng": {
+					"type": "string"
+				},
+				"start": {
+					"type": "string"
+				},
+				"end": {
+					"type": "string"
+				},
+				"food_lot_id": {
+					"$ref": "Object"
+				},
+				"share_count": {
+					"format": "int32",
+					"type": "integer"
+				}
+			}
+		},
+		"Tweet": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"text": {
+					"type": "string"
+				},
+				"tw_created_at": {
+					"type": "string"
+				},
+				"format_text": {
+					"type": "string"
+				}
+			}
+		},
+		"Object": {
+			"type": "object",
+			"properties": {
+
+			}
+		}
+	}
+}
