@@ -45,23 +45,23 @@ Click **Create**. Once the status changes to **Running**, the portal will automa
 
 ![][api-app-blade]
 
+Click on **All Settings**, then **Application Settings**. Set the Access level to **Public (anonymous)** and click **Save**.
+
+![][set-api-app-access-level]
+
 Click on the **API App host** tile in the API App blade.
 
 ![][api-app-host]
 
-Find the **Deployment** section of the API App blade. (You may need to scroll to see this part of the blade.)
+Find the **Deployment** section of the API App blade and click on the **Set up continuous deployment** tile. (You may need to scroll to see this part of the blade.)
 
 ![][deployment-part]
-
-Click on **All Settings**, then **Application Settings**. Set the Access level to **Public (anonymous)** and click **Save**.
-
-![][set-api-app-access-level]
 
 Click **Choose Source**, then **Local Git Repository**. Click **OK**.
 
 ![][setup-git-publishing]
 
-Click at **Set deployment credentials**. Create a user name and password. Click **Save**. (If you have previously enabled publishing for an API App or any other App Service App, you don't need to do this step.)
+Click at the **Set deployment credentials** tile. Create a user name and password. Click **Save**. (If you have previously enabled publishing for an API App or any other App Service App, you don't need to do this step.)
 
 ![][deployment-credentials]
 
@@ -73,7 +73,7 @@ To publish, you will push to a Git remote repository. Find the URL for repositor
 
 In this section, we will take a look at the code provided as part of the NodeAPIApp sample.
 
-> [WACOM.NOTE] To complete this tutorial you will need to clone the code in [this GitHub repository](http://go.microsoft.com/fwlink/?LinkID=534023&clcid=0x409) or download the .zip file containing the code in the repository. Node.js API App sample and unzip it in your local disk. 
+> [WACOM.NOTE] To complete this tutorial you will need to clone the code in [this GitHub repository](http://go.microsoft.com/fwlink/?LinkID=534023&clcid=0x409) or click on "Download Zip" at the Github repository to download it as a .zip file. Once the file is downloaded, unzip it in your local disk.
 
 Azure App Service has two prerequisites in order to recognize a Node.js application as an API App:
 
