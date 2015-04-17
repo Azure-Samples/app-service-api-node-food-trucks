@@ -98,11 +98,11 @@ Use your text editor and inspect the **server.js** file.
 
 As part of the code, we're using the swaggerize-express module and we are filling the required properties for it to work.
 
-app.use(swaggerize({
-    api: require('./api.json'),
-    docspath: '/swagger',
-    handlers: './handlers/'
-}));
+	app.use(swaggerize({
+	    api: require('./api.json'),
+	    docspath: '/swagger',
+	    handlers: './handlers/'
+	}));
 
 The _api_ property points to the api.json file which contains the Swagger 2.0 spec definition of our API.
 > [WACOM.NOTE] You can manually create the file in a text editor or use the online [editor of Swagger](http://editor.swagger.io) and download the JSON file from there.
@@ -121,13 +121,17 @@ We have explained the files required by the platform in order to recognize a Nod
 In this section we're going to run the application locally to verify it works prior to deployment.
 
 1. Navigate to the folder were you downloaded the sample.
-2. Open command line prompt and write the following
+2. Open command line prompt and write the following and hit enter
 
-    	node server.js
+	npm install
 
-3. The output should be "Server started.."
-4. Navigate your browser to http://localhost:1337/
-5. You should see the sample page
+3. Once that is completed, then write and hit enter
+
+	node server.js
+
+4. The output should be "Server started.."
+5. Navigate your browser to http://localhost:1337/
+6. You should see the sample page below
 
 ![][sample-api-app-page]
 
