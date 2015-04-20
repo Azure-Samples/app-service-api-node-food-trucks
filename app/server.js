@@ -1,5 +1,7 @@
 
 var port = process.env.PORT || 1337;
+var baseHost = process.env.WEBSITE_HOSTNAME || 'localhost';
+
 var http = require('http');
 var express = require('express');
 var swaggerize = require('swaggerize-express');
@@ -17,6 +19,11 @@ app.use(swaggerize({
 app.use('/', express.static(__dirname + '/html'));
 
 server.listen(port, 'localhost', function () {
-    app.setHost(server.address().address + ':' + port);
-    console.log("Server started..");
+  if (baseHost === 'localhost')
+  {
+    app.setHost(baseHost + ':' + port);
+  } else {
+    app.setHost(baseHost);
+  }
+    console.log("Server started ..");
 });
