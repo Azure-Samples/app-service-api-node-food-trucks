@@ -24,7 +24,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/FoodTrucks"
+								"$ref": "#/definitions/Restaurant"
 							}
 						}
 					}
@@ -54,7 +54,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/FoodTrucks"
+								"$ref": "#/definitions/Restaurant"
 							}
 						}
 					}
@@ -64,14 +64,6 @@
 		}
 	},
 	"definitions": {
-		"FoodTrucks": {
-			"type": "object",
-			"properties": {
-				"Restaurant": {
-					"$ref": "Restaurant"
-				}
-			}
-		},
 		"Restaurant": {
 			"type": "object",
 			"properties": {
@@ -101,12 +93,6 @@
 				"city": {
 					"type": "string"
 				}
-			}
-		},
-		"Object": {
-			"type": "object",
-			"properties": {
-
 			}
 		}
 	}
