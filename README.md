@@ -1,6 +1,6 @@
 ---
 services: app-service\api
-platforms: node
+platforms: nodejs
 author: pkefal
 ---
 
